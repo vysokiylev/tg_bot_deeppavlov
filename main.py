@@ -2,10 +2,10 @@
 import telebot as telebot
 from telebot import apihelper
 from deeppavlov import configs, train_model
-from deeppavlov import configs
 from deeppavlov.core.common.file import read_json
 from deeppavlov.core.commands.infer import build_model
 from deeppavlov.core.commands.train import train_evaluate_model_from_config
+
 
 far = train_evaluate_model_from_config(configs.faq.tfidf_logreg_en_faq)
 faq = build_model(configs.faq.tfidf_logreg_en_faq, download = True)
